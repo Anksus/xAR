@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:backgroundTint="#e0e0e0"
+
+    android:orientation="vertical"
+    >
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_marginTop="8dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <EditText
+                android:id="@+id/searchText"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/search_layout"
+                android:ems="10"
+                android:hint="@android:string/search_go"
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp" />
+
+
+            <ImageView
+                android:id="@+id/searchBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="320dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/ic_search_black_24dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cycleView"
+                android:layout_width="match_parent"
+                android:layout_height="685dp"
+
+                android:layout_marginTop="80dp" />
+
+        </RelativeLayout>
+
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottomAPP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:backgroundTint="#FFFFFF"
+            app:fabCradleMargin="10dp"
+            app:fabCradleRoundedCornerRadius="39dp"
+            app:fabCradleVerticalOffset="5dp"
+            app:hideOnScroll="true"
+            app:menu="@menu/bottom_navi"
+            app:navigationIcon="@drawable/ic_restaurant_menu_black_24dp">
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:src="@drawable/ic_qrcode"
+            android:tint="#ffffff"
+            app:backgroundTint="#FFFFFF"
+            app:elevation="4dp"
+
+            app:layout_anchor="@id/bottomAPP"
+            app:maxImageSize="30dp" />
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
